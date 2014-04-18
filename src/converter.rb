@@ -16,14 +16,14 @@ class Converter
 
   private
   def get_bits
-    @binary.to_s.split('').map do |number|
-      number.to_i
+    @binary.to_s.split('').map do |bit|
+      bit.to_i
     end
   end
 
   def validate_binary
     @bits.each do |bit|
-      raise "Invalid Binary!" unless bit == 0 || bit == 1
+      raise "Invalid binary!" unless bit == 0 || bit == 1
     end
   end
 
